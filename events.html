@@ -304,7 +304,14 @@ document.getElementById("btn").click();
         }
     }
 
-
+//Trigger search with enter key
+var input = document.getElementById("myFilter");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("btn").click();
+  }
+});
 
 
     </script>
