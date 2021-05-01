@@ -70,7 +70,7 @@ overflow:hidden;
     
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="events.html" class="nav-item nav-link active">Events</a>
+                <a href="events.html" class="nav-item nav-link active">All Events</a>
                 <a href="zenquiz.html" class="nav-item nav-link">Zen Quiz</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
@@ -91,7 +91,13 @@ overflow:hidden;
   <div class="container">
     <div class="row">
       <div class="col-sm-12 mb-3">
-        <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for events..">
+        <input type="text" id="myFilter" class="form-control" autofocus="autofocus" placeholder="Search for events..">
+        <button id="btn" onclick="myFunction()">Search</button> 
+        
+        <script>
+
+          </script>
+
       </div>
     </div>
 
@@ -251,6 +257,37 @@ overflow:hidden;
   </div>
 
   <script>
+  
+  //Prepopulate text search when specified in URL
+  window.onload=function(){ 
+
+function querySt(ji) {
+
+hu = window.location.search.substring(1); 
+gy = hu.split("&");
+
+for (i=0;i<gy.length;i++) { 
+ft = gy[i].split("="); 
+if (ft[0] == ji) { 
+return ft[1]; 
+} 
+} 
+} 
+var fieldName = querySt("fieldName");
+
+myFunction();
+
+
+if( fieldName==null){ 
+}else{ 
+document.getElementById('myFilter').value = fieldName; 
+} 
+
+document.getElementById("btn").click();
+
+} 
+
+//Function to filter event cards
     function myFunction() {
         var input, filter, cards, cardContainer, title, i;
         input = document.getElementById("myFilter");
@@ -266,6 +303,10 @@ overflow:hidden;
             }
         }
     }
+
+
+
+
     </script>
 
   
