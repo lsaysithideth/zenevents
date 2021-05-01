@@ -27,7 +27,6 @@
             <div class="navbar-nav">
                 <a href="events.html" class="nav-item nav-link">All Events</a>
                 <a href="zenquiz.html" class="nav-item nav-link active">Zen Quiz</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>
@@ -53,8 +52,8 @@
       <form class="mx-auto" style="max-width: 350px; margin-top:2em;">
 
         <div class="mb-3">
-          <label for="my-email" class="form-label">What is your star sign?</label>
-          <input type="email" class="form-control" id="my-email" aria-describedby="emailHelp" placeholder="">
+          <label for="my-sign" class="form-label">What is your star sign?</label>
+          <input type="text" class="form-control" id="my-sign">
         </div>
 
         <div class="mb-3">
@@ -67,32 +66,22 @@
           <input type="number" class="form-control" id="my-number" placeholder="101">
         </div>
 
-
+<!-- Radio button code from https://www.w3schools.com/jsref/prop_radio_value.asp -->
         <label for="my-radio-a" class="form-label">Which statement best speaks to your aura?</label>
         <div id="my-radios-container">
           <div class="mb-3 form-check">
-            <input class="form-check-input" type="radio" name="my-radio-preference" id="my-radio-a" value="A">
-            <label class="form-check-label" for="my-radio-a">
-              Energy flows through movement to help bring in healing light.
-            </label>
+            <input type="radio" name="my-radio-preference" value="yoga">Energy flows through movement to help bring in healing light.<br>
           </div>
           <div class="mb-3 form-check">
-            <input class="form-check-input" type="radio" name="my-radio-preference" id="my-radio-b" value="B" checked>
-            <label class="form-check-label" for="my-radio-b">
-              Stillness is the key to unlocking worldly power.
-            </label>
+            <input type="radio" name="my-radio-preference" value="meditation">Stillness is the key to unlocking worldly power.<br>
           </div>
           <div class="mb-3 form-check">
-            <input class="form-check-input" type="radio" name="my-radio-preference" id="my-radio-c" value="C" checked>
-            <label class="form-check-label" for="my-radio-c">
-              Life starts from a simple seed in the ground that sprouts up to reach great heights.
-            </label>
+            <input type="radio" name="my-radio-preference" value="gardening">Life starts from a simple seed in the ground that sprouts up to reach great heights.<br>
           </div>
-        </div>
-      </div>
 
 
-        <button type="submit" class="btn btn-primary" id="my-button">Find my Zen Match</button>
+        <button type="submit" class="btn btn-primary" id="my-button" onclick="handleSubmit()">Find my Zen Match</button>
+
       </form>
 
       <footer style="margin-top:2em; margin-bottom:2em;">
@@ -107,60 +96,7 @@
 
         console.log("Thanks for the page visit!")
 
-        //
-        // BUTTON
-        //
 
-        var clickMeButton = document.getElementById("click-me")
-        var clickCountSpan = document.getElementById("click-count")
-        var clickCount = 0
-
-        function handleClick() {
-          console.log("---------------------")
-          console.log("YOU CLICKED ME!")
-          clickCount += 1
-          console.log("CLICK COUNT:", clickCount)
-          clickCountSpan.textContent = clickCount
-        }
-
-        clickMeButton.addEventListener("click", handleClick)
-
-        //
-        // SELECT
-        //
-
-        var mySelect = document.getElementById("my-select")
-        console.log("DEFAULT SELECTION:", mySelect.value)
-
-        function handleSelection() {
-          console.log("SELECTION:", mySelect.value)
-        }
-
-        mySelect.addEventListener("change", handleSelection)
-
-        //
-        // CHECKBOX
-        //
-
-        var myPref = document.getElementById("my-preference")
-
-        function handleCheck() {
-          console.log("OPT OUT:", myPref.checked)
-        }
-
-        myPref.addEventListener("click", handleCheck, false)
-
-        //
-        // CHECKBOX (SWITCH)
-        //
-
-        var mySwitch = document.getElementById("my-switch")
-
-        function handleSwitch() {
-          console.log("OPT OUT (SWITCH):", mySwitch.checked)
-        }
-
-        mySwitch.addEventListener("click", handleSwitch, false)
 
         //
         // RADIOS
@@ -173,6 +109,7 @@
           var selectedRadio = document.querySelector('input[name="my-radio-preference"]:checked')
           console.log("----------------")
           console.log("RADIO TOGGLE:", selectedRadio.value)
+
         }
 
         myRadioContainer.addEventListener("click", handleRadioToggle, false)
@@ -182,8 +119,6 @@
         //
 
         var submitButton = document.getElementById("my-button")
-        var emailInput = document.getElementById("my-email")
-        var passwordInput = document.getElementById("my-password")
         // etc...
 
         function handleSubmit(event) {
@@ -191,8 +126,10 @@
 
           console.log("---------------------")
           console.log("FORM SUBMIT...")
-          console.log("EMAIL:", emailInput.value)
-          console.log("PASSWORD:", passwordInput.value)
+
+          var selectedRadio = document.querySelector('input[name="my-radio-preference"]:checked')
+          var URL =  selectedRadio.value + ".html";
+          window.open(URL,"_self"); 
           // etc...
         }
 
