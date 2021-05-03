@@ -20,7 +20,7 @@
                     var searchManager = new Microsoft.Maps.Search.SearchManager(map);
                     var requestOptions = {
                         bounds: map.getBounds(),
-                        where: 'Seattle',
+                        where: 'Washington, DC',
                         callback: function (answer, userData) {
                             map.setView({ bounds: answer.results[0].bestView });
                             map.entities.push(new Microsoft.Maps.Pushpin(answer.results[0].location));
