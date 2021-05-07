@@ -13,7 +13,7 @@
             function loadMapScenario() {
                 var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
                     /* No need to set credentials if already passed in URL */
-                    center: new Microsoft.Maps.Location(47.624527, -122.355255),
+                    center: new Microsoft.Maps.Location(38.8951, -77.0364),
                     zoom: 8
                 });
                 Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
@@ -25,6 +25,7 @@
                             map.setView({ bounds: answer.results[0].bestView });
                             map.entities.push(new Microsoft.Maps.Pushpin(answer.results[0].location));
                         }
+                        
                     };
                     searchManager.geocode(requestOptions);
                 });

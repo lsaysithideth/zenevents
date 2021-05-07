@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pushpindrageventsHTML</title>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+        <style type='text/css'>body{margin:50px;padding:50px;overflow:hidden;font-family:'Segoe UI',Helvetica,Arial,Sans-Serif}</style>
+    </head>
+    <body>
+        <div id='printoutPanel'></div>
+        
+        <div id='myMap' style='width: 85vw; height: 75vh;'></div>
+        <script type='text/javascript'>
+            function loadMapScenario() {
+                var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {center: new Microsoft.Maps.Location(38.8951, -77.0364),
+                    zoom: 11});
+                var center = map.getCenter();
+                var Events = Microsoft.Maps.Events;
+                var Location = Microsoft.Maps.Location;
+                var Pushpin = Microsoft.Maps.Pushpin;
+                var pins = [
+                    new Pushpin(new Location(38.858327, -77.022459), {text: 'A', title: 'Power Yoga Class'}),
+                    new Pushpin(new Location(38.7656065, -77.4052482), {text: 'B', title: 'Yoga in Paradise'}),
+                    new Pushpin(new Location(38.7991022, -77.4458756), {text: 'C', title: 'Rooftop Yoga and Beer'}),
+                    new Pushpin(new Location(38.892037,-77.036816), {text: 'D', title: 'Falun Dafa Meditation'}),
+                    new Pushpin(new Location(38.90862999999999, -76.998019), {text: 'E', title: 'Mindful Meditation Sound Bath'}),
+                    new Pushpin(new Location(38.9024447,-76.98228280000001), {text: 'F', title: 'Learn the art of Bonsai, Indoor Gardening and Hydroponics Farming'}),
+                ];
+                map.entities.push(pins);
+                
+                }
+                
+            
+        </script>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=Aq-QslXRJ5AzOuwxDqdZgRjLunojkbxjRENmlPzEtuDbVqZIeRZW2UI7vF8vcWOi&callback=loadMapScenario' async defer></script>
+    </body>
+</html>
