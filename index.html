@@ -48,89 +48,33 @@
 
     <iframe src="https://giphy.com/embed/u3P8ktWNkjwOUTDnhi" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/space-cosmos-astrology-u3P8ktWNkjwOUTDnhi"></a></p>
 
-<div id='printoutPanel'></div>
-
-<script type='text/javascript'>
-    var map, infobox;
-
-    //Define an HTML template for a custom infobox. **Took out title as couldn't be dynamically changed. https://docs.microsoft.com/en-us/bingmaps/v8-web-control/map-control-concepts/infoboxes/multiple-pushpins-and-infoboxes
-    var infoboxTemplate = '<div class="Infobox" style=""><a class="infobox-close" href="javascript:void(0)" onClick="function test(){ infobox.setOptions({visible: false});  } test(); return false;" style=""><img class="infobox-close-img" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE0cHgiIHdpZHRoPSIxNHB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik03LDBDMy4xMzQsMCwwLDMuMTM0LDAsN2MwLDMuODY3LDMuMTM0LDcsNyw3YzMuODY3LDAsNy0zLjEzMyw3LTdDMTQsMy4xMzQsMTAuODY3LDAsNywweiBNMTAuNSw5LjVsLTEsMUw3LDhsLTIuNSwyLjVsLTEtMUw2LDdMMy41LDQuNWwxLTFMNyw2bDIuNS0yLjVsMSwxTDgsN0wxMC41LDkuNXoiLz48L3N2Zz4=" alt="close infobox"></a>' + 
-        '<div class="infobox-body" style="max-width: 256px; max-height: 126px; width: 125px;"></div><div class="infobox-info" style="">' + 
-            '<div>{description}</div></div><div class="infobox-actions" style="display: none;"><ul class="infobox-actions-list"><div></div></ul></div></div></div>';
-
-    function GetMap() {
-        map = new Microsoft.Maps.Map(document.getElementById('myMap'), {center: new Microsoft.Maps.Location(38.8951, -77.1),
-                    zoom: 10});
-
-        var center = map.getCenter();
-
-        //A title and description for the infobox.
-        var description = '<img src="https://www.bingmapsportal.com/Content/images/poi_custom.png" align="left" style="margin-right:5px;"/>This is a description with custom html. <a href="http://bing.com/maps" target="_blank">Link</a>';
-
-        //Pass the title and description into the template and pass it into the infobox as an option.
-        infobox = new Microsoft.Maps.Infobox(center, {
-            htmlContent: infoboxTemplate.replace('{description}', description)
-        , visible: false});
-
-        //Assign the infobox to a map instance.
-        infobox.setMap(map);
-
-                //Creating event data array https://www.valentinog.com/blog/html-table/
-                var events = [
-            {lat: 38.858327, long: -77.022459, id: 'A', title: 'Power Yoga Class', link: "https://www.eventbrite.com/e/power-yoga-class-tickets-152593648711?aff=ebdssbdestsearch", location: "Hains Point • Washington, DC", date: "Jun 06"},
-            {lat: 38.7656065, long: -77.4052482, id: 'B', title: 'Yoga in Paradise', link: "https://www.eventbrite.com/e/yoga-in-paradise-tickets-151677185545?aff=ebdssbdestsearch", location: "Paradise Springs Winery • Clifton, VA", date: "Jun 25"},
-            {lat: 38.7991022, long: -77.4458756, id: 'C', title: 'Rooftop Yoga and Beer', link: "https://www.eventbrite.com/e/rooftop-yoga-and-beer-tickets-152796663935?aff=ebdssbdestsearch", location: "Eavesdrop Brewery • Manassas, VA", date: "May 15"},
-            {lat: 38.892037, long: -77.036816, id: 'D', title: 'Falun Dafa Meditation', link: "https://www.eventbrite.com/e/free-falun-dafa-meditation-exercises-demo-and-teaching-sunday-tickets-152230165523?aff=ebdssbdestsearch", location: "National Mall • Washington, DC", date: "May 16"},
-            {lat: 38.90862999999999, long: -76.998019, id: 'E', title: 'Mindful Meditation Sound Bath', link: "https://www.eventbrite.com/e/mindful-meditation-sound-bath-presented-by-synergy-and-serenity-tickets-151798574623?aff=ebdssbdestsearch", location: "Union Market • Washington, DC", date: "May 12"},
-            {lat: 38.9024447, long: -76.98228280000001, id: 'F', title: 'Learn the art of Bonsai, Indoor Gardening and Hydroponics Farming', link: "https://www.eventbrite.com/e/bon-chi-learn-and-practice-the-art-of-bonsai-using-edible-plants-tickets-86238609001?aff=ebdssbdestsearch", location: "H St. Farms • Washington, DC", date: "May 23"}
-        ];
-
-        var center = map.getCenter();
-        var Events = Microsoft.Maps.Events;
-        var Location = Microsoft.Maps.Location;
-        var Pushpin = Microsoft.Maps.Pushpin;
-
-        //Create random locations in the map bounds.
-        var randomLocations = Microsoft.Maps.TestDataGenerator.getLocations(events.length, map.getBounds());
+    <div id='printoutPanel'></div>
         
-        for (var i = 0; i < randomLocations.length; i++) {
-            var pin = new Pushpin(new Location(events[i].lat, events[i].long), {text: events[i].id, title: events[i].title});
-
-            //Store some metadata with the pushpin.
-            pin.metadata = {
-                description: '<a href="' + events[i].link + '" target="_blank">' + events[i].title + '</a> <br>' + events[i].location
-            };
-
-            //Add a click event handler to the pushpin.
-            Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
-
-            //Add pushpin to the map.
-            map.entities.push(pin);
-        }
-    }
-
-
-    function pushpinClicked(e) {
-        //Make sure the infobox has metadata to display.
-        if (e.target.metadata) {
-            //Set the infobox options with the metadata of the pushpin.
-            infobox.setOptions({
-                location: e.target.getLocation(),
-                description: e.target.metadata.description,
-                visible: true
-            });
-
-        }
-    }
-
-
-
+    <div id='myMap' style='width: 85vw; height: 75vh;'></div>
+    <script type='text/javascript'>
+        function loadMapScenario() {
+            var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {center: new Microsoft.Maps.Location(38.8951, -77.0364),
+                zoom: 10});
+            var center = map.getCenter();
+            var Events = Microsoft.Maps.Events;
+            var Location = Microsoft.Maps.Location;
+            var Pushpin = Microsoft.Maps.Pushpin;
+            var pins = [
+                new Pushpin(new Location(38.858327, -77.022459), {text: 'A', title: 'Power Yoga Class'}),
+                new Pushpin(new Location(38.7656065, -77.4052482), {text: 'B', title: 'Yoga in Paradise'}),
+                new Pushpin(new Location(38.7991022, -77.4458756), {text: 'C', title: 'Rooftop Yoga and Beer'}),
+                new Pushpin(new Location(38.892037,-77.036816), {text: 'D', title: 'Falun Dafa Meditation'}),
+                new Pushpin(new Location(38.90862999999999, -76.998019), {text: 'E', title: 'Mindful Meditation Sound Bath'}),
+                new Pushpin(new Location(38.9024447,-76.98228280000001), {text: 'F', title: 'Learn the art of Bonsai, Indoor Gardening and Hydroponics Farming'}),
+            ];
+            map.entities.push(pins);
+            
+            }
+            
+        
     </script>
-   
-    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Aq-QslXRJ5AzOuwxDqdZgRjLunojkbxjRENmlPzEtuDbVqZIeRZW2UI7vF8vcWOi' async defer></script>
-</head>
-<body>
-    <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=Aq-QslXRJ5AzOuwxDqdZgRjLunojkbxjRENmlPzEtuDbVqZIeRZW2UI7vF8vcWOi&callback=loadMapScenario' async defer></script>
+    
 
 </center>
 
