@@ -70,9 +70,9 @@ overflow:hidden;
     
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="events.html" class="nav-item nav-link active">All Events</a>
+                <a href="events.html" class="nav-item nav-link">All Events</a>
                 <a href="zenquiz.html" class="nav-item nav-link">Zen Quiz</a>
-                <a href="contactus.html" class="nav-item nav-link">Contact & FAQ</a>
+                <a href="contactus.html" class="nav-item nav-link active">Contact & FAQ</a>
             </div>
         </div>
     </nav>
@@ -83,38 +83,64 @@ overflow:hidden;
         <div class="col-md-10 col-md-offset-1">
           <div class="row">
             <div class="col-md-6">
-              <h3 class="text-center no-margin-top">The Author</h3>
-              <div class="footer-address contact-info">
-                <p><i class="fa fa-map-marker"></i>A. J. Kaye</p>
-                <p><i class="fa fa-envelope-o"></i>2hot4u@singlefarmers.com</p>
-              </div>
-              <br>
               <h3 class="text-center no-margin-top">FAQ</h3>
               <div class="contact-info text-muted">
-                <p>Q: Is this based on real life events?</p>
-                <p>A: I am God, everything I make is real, including these books and this site.</p>
-                <p>Q: Can I have my money back?</p>
-                <p>A: I spent it already... so no.</p>
-                <p>Q: Where are you right now?</p>
-                <p>A: Look out your window.</p>
+                <p>Q: My event was canceled... why?</p>
+                <p>A: Check your star sign against the day of the week and then ask yourself if there is any reason the ancient aliens should hate you.</p>
+                <p>Q: I'm not feeling so good today, and my cat keeps looking at me funny.</p>
+                <p>A: Take a deep breath, reach into your wallet, and pull out your creditcard. Copy the information from your creditcard on this page as directed.</p>
+                <p>Q: Someone took my shoes at a meditation class.</p>
+                <p>A: Ghandi once said: "The fastest way to one's soul is when one takes off their shoes."</p>
               </div>
             </div>
               <div class="col-md-6">
-                <form class="contact-form" id="contactForm" action="Formsent.html" method="get" novalidate="novalidate">
-                  <div class="form-group">
-                    <input class="form-control" name="name" id="name" placeholder="Full Name" type="text">
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" type="email" name="email" id="email" placeholder="Email Address">
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" placeholder="Subject" type="text" id="subject" name="subject">
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
-                  </div>
-                  <button name="button">Send Message to A.J. Kaye</button>
-                </form>
+                <form action="https://formspree.io/ajk169@georgetown.edu" method="POST">
+                    <input type="hidden" name="_subject" value="Bolaji's Form">                 
+                    <input type="hidden" name="_next" value="/thanks.html" >
+                    <div class="form-group">
+                       <label>Name:</label>
+                       <input type="text" class="form-control" id="name" placeholder="Name">
+                       <div class="invalid-feedback">
+                          Name must be between 2 and 20 characters
+                       </div>
+                    </div>
+                    <div class="form-group">
+                       <label>Email:</label>
+                       <input type="text" class="form-control" id="email" placeholder="Email address">
+                       <div class="invalid-feedback">
+                          Enter a valid email address
+                       </div>
+                    </div>
+                    <div class="form-group">
+                       <label>Telephone:</label>
+                       <input type="text" class="form-control" id="phone" placeholder="Phone number">
+                       <div class="invalid-feedback">
+                          Enter a valid number
+                       </div>
+                    </div>
+                    <div class="form-group">
+                       <label>Star Sign:</label>
+                       <input type="text" class="form-control" id="phone" placeholder="e.g: Leo Crossing Mars">
+                       <div class="invalid-feedback">
+                          Enter a valid Star Sign
+                       </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tell us about your existential crisis of spirit & etc:</label>
+                        <input type="text" class="form-control" id="phone" placeholder="e.g: My spirt has fallen and it can't get up!">
+                        <div class="invalid-feedback">
+                           Enter a valid existential crisis
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label>Enter your credit card number followed with 3 digit security code and expiration:</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Credit card information here">
+                        <div class="invalid-feedback">
+                           Enter a valid credit card
+                        </div>
+                     </div>
+                    <input type="submit" value="Send" class="btn btn-info btn-block">
+                 </form>
               </div>
           </div>
         </div>
@@ -123,7 +149,7 @@ overflow:hidden;
 
 <footer style="margin-top:2em; margin-bottom:2em;">
     <hr>
-    &copy; Copyright 2021 A.J. Kaye 2021
+    &copy; Copyright 2021 ZenEvents
   </footer>
 
 
