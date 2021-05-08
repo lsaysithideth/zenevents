@@ -94,9 +94,7 @@ overflow:hidden;
               </div>
             </div>
               <div class="col-md-6">
-                <form action="https://formspree.io/f/xdoyavvb" method="POST">
-                    <input type="hidden" name="_subject" value="OPIM">                 
-                    <input type="hidden" name="_next" value="/thanks.html" >
+                <form id="my-form" action="https://formspree.io/f/xdoyavvb" method="POST">
                     <div class="form-group">
                        <label>Name:</label>
                        <input type="text" class="form-control" id="name" placeholder="Name">
@@ -140,6 +138,7 @@ overflow:hidden;
                         </div>
                      </div>
                     <input type="submit" value="Send" class="btn btn-info btn-block">
+                    <p id="my-form-status"></p>
                  </form>
               </div>
           </div>
@@ -151,7 +150,28 @@ overflow:hidden;
     <hr>
     &copy; Copyright 2021 ZenEvents
   </footer>
-
+  <script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
