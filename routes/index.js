@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  var API = process.env.MY_API_KEY
+  res.render('index', { title: 'Express', API: API });
 });
 
 
@@ -19,5 +20,6 @@ router.get('/zenquiz', function(req, res, next) {
   var message = "Hello, " + name
   res.render('zenquiz', { message: message });
 });
+
 
 module.exports = router;
