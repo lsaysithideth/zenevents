@@ -21,5 +21,30 @@ router.get('/zenquiz', function(req, res, next) {
   res.render('zenquiz', { message: message });
 });
 
+/* GET zenquiz page. */
+router.get('/zenquiz', function(req, res, next) {
+  res.render('zenquiz');
+});
+
+/* GET contactus page. */
+router.get('/contactus', function(req, res, next) {
+  res.render('contactus');
+});
+
+/* GET yoga page. */
+router.get('/yoga', function(req, res, next) {
+  res.render('yoga');
+});
+
+/* GET meditation page. */
+router.get('/meditation', function(req, res, next) {
+  res.render('meditation');
+});
+
+/* GET gardening page. */
+router.get('/gardening', function(req, res, next) {
+  res.render('gardening');
+});
+
 
 module.exports = router;
