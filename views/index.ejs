@@ -120,7 +120,7 @@
             var Pushpin = Microsoft.Maps.Pushpin;
     
             //Create random locations in the map bounds.
-            var randomLocations = Microsoft.Maps.TestDataGenerator.getLocations(events.length, map.getBounds());
+            var randomLocations = Microsoft.Maps.TestDataGenerator.getLocations('<%= events.length %>', map.getBounds());
             
             for (var i = 0; i < randomLocations.length; i++) {
                 var pin = new Pushpin(new Location(events[i].lat, events[i].long), {text: events[i].id, title: events[i].title});
