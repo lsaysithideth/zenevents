@@ -31,7 +31,7 @@ DEBUG=my_app npm start
 
 Your terminal should look similar to the following.  If you are having errors, stop here and check steps above again.
 
-![Alt text](/public/images/starApp.png?raw=true "Optional Title")
+![Alt text](/public/images/startApp.png?raw=true "Optional Title")
 
 5. Type in [localhost:3000](http://localhost:3000/) into your browser to navigate to the app.  It should be running now like shown below:
 ![Alt text](/public/images/runningApp.png?raw=true "Optional Title")
