@@ -28,7 +28,7 @@ To view the earlier history of code changes, navigate to the **main** branch lik
 + Have [Node JS](https://github.com/prof-rossetti/internet-technologies/blob/main/notes/javascript/node.md) installed.
 
 **Instructions to run locally:**
-1. Download the code zip file to your Desktop.
+1. Download the code zip file (from **master** branch) to your Desktop.
 ![Alt text](/public/images/downloadZip.png?raw=true "Optional Title")
 
 2. Unzip the zip file so you have the folder name **"zenevents-master"** on your Desktop.
