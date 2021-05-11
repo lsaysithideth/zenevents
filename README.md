@@ -44,12 +44,12 @@ MY_API_KEY="[YOUR API KEY]"
 3. Copy the **.env** file obtained or created in the pre-requisites into the main **zenevents-master folder**.  Your folder should contain the following files (press **SHFT + CMD + .** keys to show hidden files):
 ![Alt text](/public/images/files.png?raw=true "Optional Title")
 
-3. In Terminal app (mac) or Command Line (windows) navigate to the zenevents-master folder:
+4. In Terminal app (mac) or Command Line (windows) navigate to the zenevents-master folder:
 ```` sh
 cd Desktop/zenevents-master
 ````
 
-4. Start the app locally by entering in the following line:
+5. Start the app locally by entering in the following line:
 ```` sh
 DEBUG=my_app npm start 
 ````
@@ -58,10 +58,10 @@ Your terminal should look similar to the following.  If you are having errors, s
 
 ![Alt text](/public/images/startApp.png?raw=true "Optional Title")
 
-5. Type in [localhost:3000](http://localhost:3000/) into your browser to navigate to the app.  It should be running now like shown below:
+6. Type in [localhost:3000](http://localhost:3000/) into your browser to navigate to the app.  It should be running now like shown below:
 ![Alt text](/public/images/runningApp.png?raw=true "Optional Title")
 
-6. To close the app go back to your terminal and press **CTRL + c** keys to close out of the local server.
+7. To close the app go back to your terminal and press **CTRL + c** keys to close out of the local server.
 
 ## Page Features
 ### Home or Index
