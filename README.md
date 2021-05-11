@@ -4,7 +4,7 @@
 Website Project Deliverable for OPIM-668 Spring 2021 Internet Business Technologies.  Code by Austin Kaye, Sam Pandey, Linda Saysithideth and Ran Zuo.
 
 - [Introduction](#introduction)
-- [Run locally](#run-locally)
+- [Run Locally](#run-locally)
 - [Page Features](#page-features)
     - [Home/Index](#home-or-index)
     - [All Events](#all-events)
@@ -23,7 +23,7 @@ To view the earlier history of code changes, navigate to the **main** branch lik
 
 ![Alt text](/public/images/mainBranch.png?raw=true "Optional Title")
 
-## Run locally
+## Run Locally
 **Pre-requisites:**
 + Have [Node JS](https://github.com/prof-rossetti/internet-technologies/blob/main/notes/javascript/node.md) installed.
 + Obtain **.env** file containing valid **bing API key**, or obtain a [free bing API key](http://mapsforenterprise.binginternal.com/en-us/maps/create-a-bing-maps-key) and create a **.env** file with the contents below (replace [YOUR API KEY] with your own).  Will will use this file in the steps below.
