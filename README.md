@@ -65,6 +65,8 @@ Your terminal should look similar to the following.  If you are having errors, s
 
 ## Page Features
 ### Home or Index
+The main page features a bing map utilizing code to show location pins for each event with name labels and interactivity when you click the pins.  The pin shows and infobox popup containing the event title with a link to the corresponding EventBrite page, and the location of the event.  The map has a lot of other functionality provided by bing, such as zoom, pan, and current location enabling.
+
 ### All Events
 ### Zen Quiz
 ### Contact and FAQ
