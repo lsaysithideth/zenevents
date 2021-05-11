@@ -64,15 +64,38 @@ Your terminal should look similar to the following.  If you are having errors, s
 7. To close the app go back to your terminal and press **CTRL + c** keys to close out of the local server.
 
 ## Page Features
+All of the pages are called within the **"index.js"** file in the **"routes"** folder passing variables, which includes API keys from env files and event data arrays, through the ***res.render()*** function.  The pages being called are **.ejs** files in the **"views"** folder.
+
 ### Home or Index
-The main page features a bing map utilizing code to show location pins for each event with name labels and interactivity when you click the pins.  The pin shows and infobox popup containing the event title with a link to the corresponding EventBrite page, and the location of the event.  The map has a lot of other functionality provided by bing, such as zoom, pan, and current location enabling.
+The main home page features a bing map utilizing code to show location pins for each event with name labels and interactivity when you click the pins.  The pin shows and infobox popup containing the event title with a link to the corresponding EventBrite page, and the location of the event.  The map has a lot of other functionality provided by bing, such as zoom, pan, and current location enabling.
+
+Each pin corresponds to an **"events"** data array in the **"index.js"** file in the **"routes"** folder.  The pins dynamically populate based on the events data array by iterating over a javascript ***for*** statement in the **"index.ejs"** file in **"views"** folder.  This ***for*** statement repeats creation and labeling of the map points and infoboxes.
 
 ### All Events
+The All Events page features a card list of events that is searchable and can be dynamically expanded with additions to the **"events"** data array in the **"index.js"** file in the **"routes"** folder.  The card list is dynamically populated by a javascript ***forEach*** statement which repeats creation of the HTML <div> formatting, linking, and search keywords for each card.  Hidden search keywords have been enabled with the ***<div class="hiddentext">${result.keywords}</div>*** tags to allow users to search on specific "zen-related" keywords that are not displayed in the cards, (like "gardening").
+
 ### Zen Quiz
+The Zen Quiz page allows more input functionality from the user in linking to a personalized "zen personality" page after clicking the submit button based on the question answers.  The quiz submit will take the user to one of three personality pages: yoga, meditation or gardening.  Then each personality page allows the user to link to the All Events page with a prepopulated search to automatically filter the event results based on the specific personality.
+
 ### Contact and FAQ
+The Contact and FAQ allows more input functionality from the user to submit info that forwards and email to the creators of this site.  Once the ***Send*** button is hit there will be a confirmation message that the form has been sent.
 
 ## Code Sources
-Map and pushpin sources:
+Map pushpin and infobox sources:
 + https://www.bing.com/api/maps/sdk/mapcontrol/isdk/setmapviewoptions#HTML
 + https://www.bing.com/api/maps/sdk/mapcontrol/isdk/pushpinlabels#HTML
 + https://www.bing.com/api/maps/sdk/mapcontrol/isdk/pushpindragevents#HTML
++ https://docs.microsoft.com/en-us/bingmaps/v8-web-control/map-control-concepts/infoboxes/multiple-pushpins-and-infoboxes
+
+Creating data arrays
++ https://www.valentinog.com/blog/html-table/
+
+Navbar
++ https://getbootstrap.com/docs/5.0/components/navbar/
+
+Repeat html div containers dynamically based off events data array in index.js file
++ https://stackoverflow.com/questions/54706080/generating-dynamic-html-cards-from-a-javascript-array
++ https://www.w3schools.com/js/js_output.asp
+
+Events Album/Cards
++ https://getbootstrap.com/docs/5.0/examples/album/
