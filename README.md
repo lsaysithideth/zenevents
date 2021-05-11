@@ -10,6 +10,7 @@ Website Project Deliverable for OPIM-668 Spring 2021 Internet Business Technolog
     - [All Events](#all-events)
     - [Zen Quiz](#zen-quiz)
     - [Contact & FAQ](#contact-and-faq)
+- [Code Sources](#code-sources)
 
 ## Intro
 The Zenevents webpage shows various zen-related event happenings in the DC-Metro area.  Users will be able to interact with the site in multiple ways, such as linking to the EventBrite pages from the map and also the All Events page, searching through events, taking a personalized quiz that will show related events, and sending in questions through a contact form.  The app is also responsive in mobile with all components resizing, including the navigation bar converting to hamburger style for easier access.
@@ -56,3 +57,8 @@ Your terminal should look similar to the following.  If you are having errors, s
 ### All Events
 ### Zen Quiz
 ### Contact and FAQ
+### Code Sources
+Map and pushpin sources:
++ https://www.bing.com/api/maps/sdk/mapcontrol/isdk/setmapviewoptions#HTML
++ https://www.bing.com/api/maps/sdk/mapcontrol/isdk/pushpinlabels#HTML
++ https://www.bing.com/api/maps/sdk/mapcontrol/isdk/pushpindragevents#HTML
