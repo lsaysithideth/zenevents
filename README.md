@@ -12,9 +12,9 @@ Website Project Deliverable for OPIM-668 Spring 2021 Internet Business Technolog
     - [Contact & FAQ](#contact-and-faq)
 
 ## Intro
-The Zenevents webpage shows various zen-related event happenings in the DC-Metro area.  Users will be able to interact with the site in multiple ways, such as linking to the EventBrite pages from the map and also the All Events page, searching through events, taking a personalized quiz that will show related events, and sending in questions through a contact form.
+The Zenevents webpage shows various zen-related event happenings in the DC-Metro area.  Users will be able to interact with the site in multiple ways, such as linking to the EventBrite pages from the map and also the All Events page, searching through events, taking a personalized quiz that will show related events, and sending in questions through a contact form.  The app is also responsive in mobile with all components resizing, including the navigation bar converting to hamburger style for easier access.
 
-**NOTE:** Our team initally developed the code first through Github main branch, with contributions from each team member, that was being hosted on Github pages.  In order to increase security with API map keys we later on decided to copy everything to a new local app that is being pushed to Heroku.  
+**NOTE:** Our team initally developed the code first through the Github **main** branch, with contributions from each team member, that was being hosted on Github pages.  In order to increase security with API map keys we later on decided to copy everything to a new local app that is being pushed to Heroku.  
 
 The API key is now stored in the **Heroku Config Vars** settings and also the **.env** file to enable the home page Bing map to be run locally.  
 
