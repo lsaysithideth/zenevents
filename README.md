@@ -32,7 +32,7 @@ To view the earlier history of code changes, navigate to the **main** branch lik
 # my-secure-project/.env
 
 # these are environment variables:
-MY_API_KEY="Aq-QslXRJ5AzOuwxDqdZgRjLunojkbxjRENmlPzEtuDbVqZIeRZW2UI7vF8vcWOi"
+MY_API_KEY="[YOUR API KEY]"
 ````
 
 **Instructions to run locally:**
