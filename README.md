@@ -57,7 +57,8 @@ Your terminal should look similar to the following.  If you are having errors, s
 ### All Events
 ### Zen Quiz
 ### Contact and FAQ
-### Code Sources
+
+## Code Sources
 Map and pushpin sources:
 + https://www.bing.com/api/maps/sdk/mapcontrol/isdk/setmapviewoptions#HTML
 + https://www.bing.com/api/maps/sdk/mapcontrol/isdk/pushpinlabels#HTML
