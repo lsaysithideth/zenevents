@@ -13,10 +13,16 @@ Website Project Deliverable for OPIM-668 Spring 2021 Internet Business Technolog
 
 ## Intro
 ## Run locally
+Pre-requisites
++ Have [Node JS](https://github.com/prof-rossetti/internet-technologies/blob/main/notes/javascript/node.md) installed.
+
 1. Download the code zip file to your Desktop.
 ![Alt text](/public/images/downloadZip.png?raw=true "Optional Title")
 2. Unzip the zip file so you have the folder name "zenevents-master" on your Desktop.
-
+3. In Terminal app (mac) or Command Line (windows) navigate to the zenevents-master folder:
+```` sh
+cd Desktop/zenevents-master
+````
 ## Page Features
 ### Home or Index
 ### All Events
