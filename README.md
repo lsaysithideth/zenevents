@@ -12,6 +12,11 @@ Website Project Deliverable for OPIM-668 Spring 2021 Internet Business Technolog
     - [Contact & FAQ](#contact-and-faq)
 
 ## Intro
+The Zenevents webpage shows various zen-related event happenings in the DC-Metro area.  Users will be able to interact with the site in multiple ways, such as linking to the EventBrite pages from the map and also the All Events page, searching through events, taking a personalized quiz that will show related events, and sending in questions through a contact form.
+
+NOTE: To view the earlier history of code changes, navigate to the **main** branch like shown below, to view the original code:
+![Alt text](/public/images/mainBranch.png?raw=true "Optional Title")
+
 ## Run locally
 **Pre-requisites:**
 + Have [Node JS](https://github.com/prof-rossetti/internet-technologies/blob/main/notes/javascript/node.md) installed.
@@ -19,11 +24,14 @@ Website Project Deliverable for OPIM-668 Spring 2021 Internet Business Technolog
 **Instructions to run locally:**
 1. Download the code zip file to your Desktop.
 ![Alt text](/public/images/downloadZip.png?raw=true "Optional Title")
-2. Unzip the zip file so you have the folder name "zenevents-master" on your Desktop.
+
+2. Unzip the zip file so you have the folder name **"zenevents-master"** on your Desktop.
+
 3. In Terminal app (mac) or Command Line (windows) navigate to the zenevents-master folder:
 ```` sh
 cd Desktop/zenevents-master
 ````
+
 4. Start the app locally by entering in the following line:
 ```` sh
 DEBUG=my_app npm start 
