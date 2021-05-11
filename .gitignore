@@ -4,7 +4,9 @@
 .DS_Store
 
 # ignore secret credentials in the ".env" file:
-.env
+#.env
+
+.env copy
 
 # ignore package dependencies in the "node_modules" directory:
 #node_modules
