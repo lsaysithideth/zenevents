@@ -26,6 +26,7 @@ To view the earlier history of code changes, navigate to the **main** branch lik
 ## Run Locally
 **Pre-requisites:**
 + Have [Node JS](https://github.com/prof-rossetti/internet-technologies/blob/main/notes/javascript/node.md) installed.
++ Have [dotenv](https://github.com/prof-rossetti/internet-technologies/blob/main/notes/javascript/packages/dotenv.md) installed.
 + Obtain **.env** file containing valid **bing API key**, or obtain a [free bing API key](http://mapsforenterprise.binginternal.com/en-us/maps/create-a-bing-maps-key) and create a **.env** file with the contents below (replace [YOUR API KEY] with your own).  Will will use this file in the steps below.
 
 ```` sh
