@@ -64,6 +64,8 @@ Your terminal should look similar to the following.  If you are having errors, s
 7. To close the app go back to your terminal and press **CTRL + c** keys to close out of the local server.
 
 ## Page Features
+The ZenEvents app is a standard webpage app with a top navigation bar to go through the pages.  There are some additional pages that can only be accessed by completing the Zen Quiz.  More details can be found in the [Zen Quiz](#zen-quiz) section of this README. 
+
 All of the pages are called within the **"index.js"** file in the **"routes"** folder passing variables, which includes API keys from env files and event data arrays, through the ***res.render()*** function.  The pages being called are **.ejs** files in the **"views"** folder.
 
 ### Home or Index
@@ -72,7 +74,7 @@ The main home page features a bing map utilizing code to show location pins for 
 Each pin corresponds to an **"events"** data array in the **"index.js"** file in the **"routes"** folder.  The pins dynamically populate based on the events data array by iterating over a javascript ***for*** statement in the **"index.ejs"** file in **"views"** folder.  This ***for*** statement repeats creation and labeling of the map points and infoboxes.
 
 ### All Events
-The All Events page features a card list of events that is searchable and can be dynamically expanded with additions to the **"events"** data array in the **"index.js"** file in the **"routes"** folder.  The card list is dynamically populated by a javascript ***forEach*** statement which repeats creation of the HTML formatting, linking, and search keywords for each card.  Hidden search keywords have been enabled with the ***"hiddentext"*** div class tags to allow users to search on specific "zen-related" keywords that are not displayed in the cards, (like "gardening").
+The All Events page features a card list of events that is searchable and can be dynamically expanded with additions to the **"events"** data array in the **"index.js"** file in the **"routes"** folder.  The card list is dynamically populated by a javascript ***forEach*** statement which repeats creation of the HTML formatting, linking, and search keywords for each card.  Hidden search keywords have been enabled with the ***"hiddentext"*** div class tag to allow users to search on specific "zen-related" keywords that are not displayed in the cards, (like "gardening").
 
 ### Zen Quiz
 The Zen Quiz page allows more input functionality from the user in linking to a personalized "zen personality" page after clicking the submit button based on the question answers.  The quiz submit will take the user to one of three personality pages: yoga, meditation or gardening.  Then each personality page allows the user to link to the All Events page with a prepopulated search to automatically filter the event results based on the specific personality.
