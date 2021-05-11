@@ -3,7 +3,7 @@
 
 Website Project Deliverable for OPIM-668 Spring 2021 Internet Business Technologies.  Code by Austin Kaye, Sam Pandey, Linda Saysithideth and Ran Zuo.
 
-- [Intro](#intro)
+- [Introduction](#introduction)
 - [Run locally](#run-locally)
 - [Page Features](#page-features)
     - [Home/Index](#home-or-index)
@@ -12,7 +12,7 @@ Website Project Deliverable for OPIM-668 Spring 2021 Internet Business Technolog
     - [Contact & FAQ](#contact-and-faq)
 - [Code Sources](#code-sources)
 
-## Intro
+## Introduction
 The Zenevents webpage shows various zen-related event happenings in the DC-Metro area.  Users will be able to interact with the site in multiple ways, such as linking to the EventBrite pages from the map and also the All Events page, searching through events, taking a personalized quiz that will show related events, and sending in questions through a contact form.  The app is also responsive in mobile with all components resizing, including the navigation bar converting to hamburger style for easier access.
 
 **NOTE:** Our team initally developed the code first through the Github **main** branch, with contributions from each team member, that was being hosted on Github pages.  In order to increase security with API map keys we later on decided to copy everything to a new local app that is being pushed to Heroku.  
@@ -26,12 +26,23 @@ To view the earlier history of code changes, navigate to the **main** branch lik
 ## Run locally
 **Pre-requisites:**
 + Have [Node JS](https://github.com/prof-rossetti/internet-technologies/blob/main/notes/javascript/node.md) installed.
++ Obtain **.env** file containing valid **bing API key**, or obtain a [free bing API key](http://mapsforenterprise.binginternal.com/en-us/maps/create-a-bing-maps-key) and create a **.env** file with the contents below (replace [YOUR API KEY] with your own).  Will will use this file in the steps below.
+
+```` sh
+# my-secure-project/.env
+
+# these are environment variables:
+MY_API_KEY="Aq-QslXRJ5AzOuwxDqdZgRjLunojkbxjRENmlPzEtuDbVqZIeRZW2UI7vF8vcWOi"
+````
 
 **Instructions to run locally:**
 1. Download the code zip file (from **master** branch) to your Desktop.
 ![Alt text](/public/images/downloadZip.png?raw=true "Optional Title")
 
 2. Unzip the zip file so you have the folder name **"zenevents-master"** on your Desktop.
+
+3. Copy the **.env** file obtained or created in the pre-requisites into the main **zenevents-master folder**.  Your folder should contain the following files (press **SHFT + CMD + .** keys to show hidden files):
+![Alt text](/public/images/files.png?raw=true "Optional Title")
 
 3. In Terminal app (mac) or Command Line (windows) navigate to the zenevents-master folder:
 ```` sh
