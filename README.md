@@ -121,7 +121,7 @@ Events Album/Cards
 
 - https://getbootstrap.com/docs/5.0/examples/album/
 
-D3 and reading csv files
+d3 and reading csv files
 
 - https://www.freecodecamp.org/news/learn-d3-js-in-5-minutes-c5ec29fb0725/
 - https://www.linkedin.com/learning/d3-js-essential-training-for-data-scientists/parsing-a-csv-file
