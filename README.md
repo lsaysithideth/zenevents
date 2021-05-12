@@ -56,7 +56,13 @@ MY_API_KEY="[YOUR API KEY]"
 cd Desktop/zenevents-master
 ```
 
-5. Start the app locally by entering in the following line:
+5. Install all required packages by running the below command while in the zenevents-master folder:
+
+```sh
+npm install
+```
+
+6. Start the app locally by entering in the following line:
 
 ```sh
 DEBUG=my_app npm start
@@ -66,10 +72,10 @@ Your terminal should look similar to the following. If you are having errors, st
 
 ![Alt text](/public/images/startApp.png?raw=true "Optional Title")
 
-6. Type in [localhost:3000](http://localhost:3000/) into your browser to navigate to the app. It should be running now like shown below:
+7. Type in [localhost:3000](http://localhost:3000/) into your browser to navigate to the app. It should be running now like shown below:
    ![Alt text](/public/images/runningApp.png?raw=true "Optional Title")
 
-7. To close the app go back to your terminal and press **CTRL + c** keys to close out of the local server.
+8. To close the app go back to your terminal and press **CTRL + c** keys to close out of the local server.
 
 ## Page Features
 
