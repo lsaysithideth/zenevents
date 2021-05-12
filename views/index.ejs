@@ -115,11 +115,13 @@
             var Location = Microsoft.Maps.Location;
             var Pushpin = Microsoft.Maps.Pushpin;
 
-            //get events data from csv file in /public/ folder, and iterate into new cards for each
-            //https://stackoverflow.com/questions/54706080/generating-dynamic-html-cards-from-a-javascript-array
-            //https://www.w3schools.com/js/js_output.asp
-            d3.csv("events.csv").get(function(error,data){
-            var events = data;
+            var events = JSON.parse('<%- events %>')
+
+            // //get events data from csv file in /public/ folder, and iterate into new cards for each
+            // //https://stackoverflow.com/questions/54706080/generating-dynamic-html-cards-from-a-javascript-array
+            // //https://www.w3schools.com/js/js_output.asp
+            // d3.csv("events.csv").get(function(error,data){
+            // var events = data;
             
             //Create random locations in the map bounds.
             var randomLocations = Microsoft.Maps.TestDataGenerator.getLocations(events.length, map.getBounds());
@@ -138,7 +140,7 @@
                 //Add pushpin to the map.
                 map.entities.push(pin);
             }
-        })
+        //})
         }
     
 

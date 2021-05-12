@@ -185,11 +185,13 @@ input.addEventListener("keyup", function(event) {
   }
 });
 
-//get events data from csv file in /public/ folder, and iterate into new cards for each
-  //https://stackoverflow.com/questions/54706080/generating-dynamic-html-cards-from-a-javascript-array
-  //https://www.w3schools.com/js/js_output.asp
-d3.csv("events.csv").get(function(error,data){
-  var events = data;
+var events = JSON.parse('<%- events %>')
+
+// //get events data from csv file in /public/ folder, and iterate into new cards for each
+//   //https://stackoverflow.com/questions/54706080/generating-dynamic-html-cards-from-a-javascript-array
+//   //https://www.w3schools.com/js/js_output.asp
+// d3.csv("events.csv").get(function(error,data){
+//   var events = data;
 
   events.forEach((result, idx) => {
     const content = `        
@@ -211,7 +213,7 @@ d3.csv("events.csv").get(function(error,data){
     `;
                 
     document.getElementById("myItemsList").innerHTML += content;
-    })
+   // })
 
 });
 
