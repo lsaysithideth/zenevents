@@ -11,6 +11,10 @@
     <!-- Bootstrap CSS file -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
+    <!-- Adding the following ds script to enable reading csv files https://stackoverflow.com/questions/21381097/d3-is-not-defined-referenceerror -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> 
+
+
 </head>
 <body>
 
@@ -106,14 +110,18 @@
     
             //Assign the infobox to a map instance.
             infobox.setMap(map);
-
-            var events = JSON.parse('<%- events %>')
     
             var center = map.getCenter();
             var Events = Microsoft.Maps.Events;
             var Location = Microsoft.Maps.Location;
             var Pushpin = Microsoft.Maps.Pushpin;
-    
+
+            //get events data from csv file in /public/ folder, and iterate into new cards for each
+            //https://stackoverflow.com/questions/54706080/generating-dynamic-html-cards-from-a-javascript-array
+            //https://www.w3schools.com/js/js_output.asp
+            d3.csv("events.csv").get(function(error,data){
+            var events = data;
+            
             //Create random locations in the map bounds.
             var randomLocations = Microsoft.Maps.TestDataGenerator.getLocations(events.length, map.getBounds());
             
@@ -131,6 +139,7 @@
                 //Add pushpin to the map.
                 map.entities.push(pin);
             }
+        })
         }
     
     

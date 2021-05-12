@@ -75,17 +75,17 @@ Your terminal should look similar to the following. If you are having errors, st
 
 The ZenEvents app is a standard webpage app with a top navigation bar to go through the pages. There are some additional pages that can only be accessed by completing the Zen Quiz. More details can be found in the [Zen Quiz](#zen-quiz) section of this README.
 
-All of the pages are called within the **"index.js"** file in the **"routes"** folder passing variables, which includes API keys from env files and event data arrays, through the **_res.render()_** function. The pages being called are **.ejs** files in the **"views"** folder.
+All of the pages are called within the **"index.js"** file in the **/routes/** folder passing variables, which includes API keys from env files and event data arrays, through the **_res.render()_** function. The pages being called are **.ejs** files in the **/views/** folder.
 
 ### Home or Index
 
 The main home page features a bing map utilizing code to show location pins for each event with name labels and interactivity when you click the pins. The pin shows and infobox popup containing the event title with a link to the corresponding EventBrite page, and the location of the event. The map has a lot of other functionality provided by bing, such as zoom, pan, and current location enabling.
 
-Each pin corresponds to an **"events"** data array in the **"index.js"** file in the **"routes"** folder. The pins dynamically populate based on the events data array by iterating over a javascript **_for_** statement in the **"index.ejs"** file in **"views"** folder. This **_for_** statement repeats creation and labeling of the map points and infoboxes.
+Each pin corresponds to an **"events"** data array brought in with d3 through an **events.csv** file located in the **/public/** folder. The pins dynamically populate based on the contents of the csv file by iterating over a javascript **_for_** statement in the **"index.ejs"** file in **/views/** folder. This **_for_** statement repeats creation and labeling of the map points and infoboxes.
 
 ### All Events
 
-The All Events page features a card list of events that is searchable and can be dynamically expanded with additions to the **"events"** data array in the **"index.js"** file in the **"routes"** folder. The card list is dynamically populated by a javascript **_forEach_** statement which repeats creation of the HTML formatting, linking, and search keywords for each card. Hidden search keywords have been enabled with the **_"hiddentext"_** div class tag to allow users to search on specific "zen-related" keywords that are not displayed in the cards, (like "gardening").
+The All Events page features a card list of events that is searchable and can be dynamically expanded with additions to the **events.csv** file in the **/public/** folder. The card list is dynamically populated by a javascript **_forEach_** statement which repeats creation of the HTML formatting, linking, and search keywords for each card. Hidden search keywords have been enabled with the **_"hiddentext"_** div class tag to allow users to search on specific "zen-related" keywords that are not displayed in the cards, (like "gardening").
 
 ### Zen Quiz
 
