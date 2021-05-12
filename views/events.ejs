@@ -14,6 +14,8 @@
        <!-- Bootstrap CSS file -->
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
+       <!-- Adding the following ds script to enable reading csv files https://stackoverflow.com/questions/21381097/d3-is-not-defined-referenceerror -->
+       <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> 
 
     <!-- Bootstrap core CSS -->
 <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -338,6 +340,23 @@ input.addEventListener("keyup", function(event) {
 
   var events = JSON.parse('<%- events %>')
 
+      //csv to data array test
+      
+
+// //var x = function (a, b) {return a * b};
+// var eventscsv2 = d3.csv("events.csv").get(function(error,data){
+//   console.log(data)
+// //return data
+// });
+
+// var eventscsv = [
+// //{lat: 38.7991022, long: -77.4458756, id: 'A', title: 'Rooftop Yoga and Beer', link: 'https://www.eventbrite.com/e/rooftop-yoga-and-beer-tickets-152796663935?aff=ebdssbdestsearch', location: 'Eavesdrop Brewery • Manassas, VA', date: "May 15", img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F133729429%2F457048725368%2F1%2Foriginal.20210429-032949?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C1325%2C3024%2C1512&s=2d62d8baaa64b1a66e6ba55d82060ab3s', keywords: 'yoga'}
+// {lat: 38.7991022, long: -77.4458756}
+
+// ];
+
+//eventscsv
+
   events.forEach((result, idx) => {
     const content = `        
     <div class="col">
@@ -361,6 +380,8 @@ input.addEventListener("keyup", function(event) {
     //document.getElementById("myItems").innerHTML += content;
     })
 
+
+
     </script>
 
   
@@ -381,6 +402,6 @@ input.addEventListener("keyup", function(event) {
 
     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-      
-  </body>
+
+    </body>
 </html>

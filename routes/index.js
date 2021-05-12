@@ -15,12 +15,11 @@ var events = [
   {lat: 38.7656065, long: -77.4052482, id: 'I', title: 'Yoga in Paradise', link: 'https://www.eventbrite.com/e/yoga-in-paradise-tickets-151677185545?aff=ebdssbdestsearch', location: 'Paradise Springs Winery • Clifton, VA', date: "Jun 25", img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F132809217%2F75222167911%2F1%2Foriginal.20210420-155131?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C13%2C1080%2C540&s=41dce3d2d185ab7c00f7897d0d0c6786s', keywords: 'yoga'}
 ];
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //the following API variable grabs the API key from the .env file
   //Need to enable "require('dotenv').config();" in app.js file beforehand
-  var API = process.env.MY_API_KEY
+  var API = process.env.MY_API_KEY;
   res.render('index', {API: API, events: JSON.stringify(events)});
 });
 
