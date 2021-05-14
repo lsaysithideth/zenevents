@@ -87,11 +87,11 @@ All of the pages are called within the **"index.js"** file in the **/routes/** f
 
 The main home page features a bing map utilizing code to show location pins for each event with name labels and interactivity when you click the pins. The pin shows and infobox popup containing the event title with a link to the corresponding EventBrite page, and the location of the event. The map has a lot of other functionality provided by bing, such as zoom, pan, and current location enabling.
 
-Each pin corresponds to an **"events"** data array brought in with d3 through an **events.csv** file located in the **/public/** folder. The pins dynamically populate based on the contents of the csv file by iterating over a javascript **_for_** statement in the **"index.ejs"** file in **/views/** folder. This **_for_** statement repeats creation and labeling of the map points and infoboxes.
+Each pin corresponds to an **"events"** data array defined in the **index.js** file located in the **/routes/** folder. The pins dynamically populate based on the contents of the array by iterating over a javascript **_for_** statement in the **"index.ejs"** file in **/views/** folder. This **_for_** statement repeats creation and labeling of the map points and infoboxes.
 
 ### All Events
 
-The All Events page features a card list of events that is searchable and can be dynamically expanded with additions to the **events.csv** file in the **/public/** folder. The card list is dynamically populated by a javascript **_forEach_** statement which repeats creation of the HTML formatting, linking, and search keywords for each card. Hidden search keywords have been enabled with the **_"hiddentext"_** div class tag to allow users to search on specific "zen-related" keywords that are not displayed in the cards, (like "gardening").
+The All Events page features a card list of events that is searchable and can be dynamically expanded with additions to the **"events"** data array. The card list is dynamically populated by a javascript **_forEach_** statement which repeats creation of the HTML formatting, linking, and search keywords for each card. Hidden search keywords have been enabled with the **_"hiddentext"_** div class tag to allow users to search on specific "zen-related" keywords that are not displayed in the cards, (like "gardening").
 
 ### Zen Quiz
 
@@ -126,8 +126,3 @@ Repeat html div containers dynamically based off events data array in index.js f
 Events Album/Cards
 
 - https://getbootstrap.com/docs/5.0/examples/album/
-
-d3 and reading csv files
-
-- https://www.freecodecamp.org/news/learn-d3-js-in-5-minutes-c5ec29fb0725/
-- https://www.linkedin.com/learning/d3-js-essential-training-for-data-scientists/parsing-a-csv-file
